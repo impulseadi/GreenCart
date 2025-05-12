@@ -5,6 +5,7 @@
 
 🌐 **Live site**: [greencart-tau.vercel.app](https://greencart-tau.vercel.app)  
 📦 **GitHub repository**: [github.com/diegovilhalva/greencart](https://github.com/diegovilhalva/greencart)
+![Screenshot 2025-05-12 141446](https://github.com/user-attachments/assets/23f27610-402b-4197-9ded-916c8f3d5c96)
 
 ---
 
