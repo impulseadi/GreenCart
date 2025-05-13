@@ -1,11 +1,11 @@
 import React, { Suspense } from "react";
-import BestSeller from "../components/BestSeller";
 import BottomBanner from "../components/BottomBanner";
 import MainBanner from "../components/MainBanner";
 import NewsLetter from "../components/NewsLetter";
 
 // Lazy load the Categories component
 const Categories = React.lazy(() => import("../components/Categories"));
+const BestSeller = React.lazy(() => import("../components/BestSeller"));
 
 const Home = () => {
   return (
@@ -17,7 +17,9 @@ const Home = () => {
             <Categories />
         </Suspense>
         
-        <BestSeller />
+       <Suspense fallback={<div>Loading...</div>}>
+            <BestSeller/>
+        </Suspense>
         <BottomBanner />
         <NewsLetter />
     </div>
