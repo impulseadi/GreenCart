@@ -42,7 +42,7 @@ const MyOrders = () => {
                         <div key={i} className={`relative bg-white text-gray-/50 ${order.items.length !== i + 1 && 'border-b'} border-gray-300 flex flex-col md:flex-row md:items-center justify-between p-4 py-5 md:gap-16 w-full max-w-4xl`}>
                             <div className="flex items-center mb-4 md:mb-0 ">
                                 <div className="bg-primary/10 p-4 rounded-lg">
-                                    <img src={item.product.image[0]} className="w-16 h-16" alt="Product image" />
+                                    <img  src={item.product.image[0]} className="w-16 h-16" alt="Product image" loading="lazy" />
                                 </div>
                                 <div className="ml-4">
                                     <h2 className="text-xl font-medium text-gray-800">{item.product.name}</h2>

@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
     return product && (
         <div className="border border-gray-500/20 rounded-md px-3 md:px-4 py-2 bg-white w-full transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg" onClick={() => { navigate(`/products/${product.category.toLowerCase()}/${product._id}`); scrollTo(0, 0) }}>
             <div className="group cursor-pointer flex items-center justify-center px-2">
-                <img className="group-hover:scale-105 transition max-w-26 md:max-w-36" src={product.image[0]} alt={product.name} />
+                <img className="group-hover:scale-105 transition max-w-26 md:max-w-36" src={product.image[0]} alt={product.name} loading="lazy"/>
             </div>
             <div className="text-gray-500/60 text-sm">
                 <p>{product.category}</p>
@@ -17,7 +17,7 @@ const ProductCard = ({ product }) => {
                 <div className="flex items-center gap-0.5">
                     {Array(5).fill('').map((_, i) => (
                         (
-                            <img key={i} src={i < 4 ? assets.star_icon : assets.star_dull_icon} alt='star' className='md:w-3.5 w-3' />
+                            <img key={i} src={i < 4 ? assets.star_icon : assets.star_dull_icon} alt='star' className='md:w-3.5 w-3' loading="lazy" />
                         )
                     ))}
                     <p>(4)</p>
@@ -29,7 +29,7 @@ const ProductCard = ({ product }) => {
                     <div className="text-primary" onClick={(e) => { e.stopPropagation() }}>
                         {!cartItems[product._id] ? (
                             <button className="flex items-center justify-center gap-1 bg-primary/10 border border-primary/40 md:w-[80px] w-[64px] h-[34px] rounded cursor-pointer " onClick={() => addToCart(product._id)} >
-                                <img src={assets.cart_icon} alt="cart icon" />
+                                <img src={assets.cart_icon} alt="cart icon" loading="lazy"/>
                                 Add
                             </button>
                         ) : (

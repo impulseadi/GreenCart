@@ -105,7 +105,7 @@ const Cart = () => {
                                 navigate(`/products/${product.category.toLowerCase()}/${product._id}`)
                                 scrollTo(0, 0)
                             }} className="cursor-pointer w-24 h-24 flex items-center justify-center border border-gray-300 rounded">
-                                <img className="max-w-full h-full object-cover" src={product.image[0]} alt={product.name} />
+                                <img className="max-w-full h-full object-cover" src={product.image[0]} alt={product.name} loading="lazy" />
                             </div>
                             <div>
                                 <p className="hidden md:block font-semibold">{product.name}</p>
@@ -124,7 +124,7 @@ const Cart = () => {
                         </div>
                         <p className="text-center">{currency}{(product.offerPrice * product.quantity).toFixed(2)} </p>
                         <button onClick={() => removeFromCart(product._id)} className="cursor-pointer mx-auto">
-                            <img src={assets.remove_icon} className='inline-block w-6 h-6' alt="remove" />
+                            <img src={assets.remove_icon} className='inline-block w-6 h-6' alt="remove" loading="lazy" />
                         </button>
                     </div>)
                 )}
@@ -133,7 +133,7 @@ const Cart = () => {
                     navigate("/products")
                     scrollTo(0, 0)
                 }} className="group cursor-pointer flex items-center mt-8 gap-2 text-primary font-medium">
-                    <img src={assets.arrow_right_icon_colored} alt="arrow" className='group-hover:translate-x-1 transition' />
+                    <img src={assets.arrow_right_icon_colored} alt="arrow" className='group-hover:translate-x-1 transition' loading="lazy"/>
                     Continue Shopping
                 </button>
 
@@ -204,6 +204,7 @@ const Cart = () => {
                 src={assets.empty_cart_icon || "https://www.svgrepo.com/show/13656/shopping-cart.svg"}
                 alt="Empty cart"
                 className="w-28 h-28 mb-6 opacity-60"
+                loading="lazy"
             />
             <h2 className="text-2xl font-semibold text-gray-700 mb-2">Your cart is empty</h2>
             <p className="text-gray-500 mb-6">Looks like you haven’t added anything to your cart yet.</p>

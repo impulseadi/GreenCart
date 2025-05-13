@@ -42,13 +42,13 @@ const ProductDetails = () => {
                     <div className="flex flex-col gap-3">
                         {product.image.map((image, index) => (
                             <div key={index} onClick={() => setThumbnail(image)} className="border max-w-24 border-gray-500/30 rounded overflow-hidden cursor-pointer" >
-                                <img src={image} alt={`Thumbnail ${index + 1}`} className="max-h-[400px] w-full object-contain" />
+                                <img  src={image} alt={`Thumbnail ${index + 1}`} className="max-h-[400px] w-full object-contain" loading="lazy" />
                             </div>
                         ))}
                     </div>
 
                     <div className="border border-gray-500/30 max-w-100 rounded overflow-hidden">
-                        <img src={thumbnail} alt="Selected product" />
+                        <img src={thumbnail} alt="Selected product" loading="lazy" />
                     </div>
                 </div>
 
@@ -58,7 +58,7 @@ const ProductDetails = () => {
                     <div className="flex items-center gap-0.5 mt-1">
                         {Array(5).fill('').map((_, i) => (
 
-                            <img src={i < 4 ? assets.star_icon : assets.star_dull_icon} alt="star icons" className='md:w-4 w-3.5' key={i} />
+                            <img src={i < 4 ? assets.star_icon : assets.star_dull_icon} alt="star icons" className='md:w-4 w-3.5' key={i} loading="lazy"/>
 
                         ))}
                         <p className="text-base ml-2">(4)</p>

@@ -58,7 +58,7 @@ const AddProduct = () => {
                                     uploadedFiles[index] = e.target.files[0]
                                     setFiles(uploadedFiles)
                                 }} type="file" multiple id={`image${index}`} hidden />
-                                <img className="max-w-24 cursor-pointer" src={files[index] ? URL.createObjectURL(files[index]) : assets.upload_area} alt="uploadArea" width={100} height={100} />
+                                <img className="max-w-24 cursor-pointer" src={files[index] ? URL.createObjectURL(files[index]) : assets.upload_area} alt="uploadArea" width={100} height={100} loading="lazy"/>
                             </label>
                         ))}
                     </div>

@@ -76,7 +76,7 @@ const Navbar = () => {
         <nav className="flex items-center justify-between px-4 sm:px-6 md:px-16 lg:px-24 py-4 border-b border-gray-300 bg-white relative">
             <div className="flex items-center justify-between w-full">
                 <NavLink to="/" onClick={() => setOpen(false)}>
-                    <img src={assets.logo} alt="Logo" className="h-8 md:h-9" />
+                    <img src={assets.logo} alt="Logo" className="h-8 md:h-9" loading="lazy"/>
                 </NavLink>
 
                 {/* Desktop Menu */}
@@ -93,11 +93,11 @@ const Navbar = () => {
                             value={searchQuery}
                             onChange={handleSearchChange}
                         />
-                        <img src={assets.search_icon} alt="search" className='w-4 h-4' />
+                        <img src={assets.search_icon} alt="search" className='w-4 h-4' loading="lazy"/>
                     </div>
 
                     <div className="relative cursor-pointer ml-4" onClick={() => navigate("/cart")}>
-                        <img src={assets.cart_icon_2} alt="cart" className='w-6 opacity-80 min-w-[24px]' />
+                        <img src={assets.cart_icon_2} alt="cart" className='w-6 opacity-80 min-w-[24px]' loading="lazy"/>
                         <button className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[18px] h-[18px] rounded-full">{getCartCount()}</button>
                     </div>
 
@@ -118,7 +118,7 @@ const Navbar = () => {
                                     src={user.avatar || assets.profile_icon}
                                     alt="profile_icon"
                                     className="w-10 h-10 rounded-full object-cover border-2 border-gray-200 hover:border-primary transition-colors"
-                                />
+                                loading="lazy" />
                             </div>
 
                             {showDropdown && (
@@ -143,7 +143,7 @@ const Navbar = () => {
                 {/* Mobile Menu Button */}
                 <div className="sm:hidden flex items-center gap-4">
                     <div className="relative cursor-pointer" onClick={() => navigate("/cart")}>
-                        <img src={assets.cart_icon_2} alt="cart" className='w-5 opacity-80 md:w-4' />
+                        <img src={assets.cart_icon_2} alt="cart" className='w-5 opacity-80 md:w-4' loading="lazy"/>
                         <button className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[18px] h-[18px] rounded-full">{getCartCount()}</button>
                     </div>
                     <button
@@ -155,7 +155,7 @@ const Navbar = () => {
                             src={open ? assets.close_icon : assets.menu_icon}
                             alt="menu icon"
                             className="w-6 transition-transform"
-                        />
+                        loading="lazy"/>
                     </button>
                 </div>
             </div>
@@ -172,7 +172,7 @@ const Navbar = () => {
                                 value={searchQuery}
                                 onChange={handleSearchChange}
                             />
-                            <img src={assets.search_icon} alt="search" className='w-4 h-4' />
+                            <img src={assets.search_icon} alt="search" className='w-4 h-4' loading="lazy"/>
                         </div>
 
                         <NavLink to="/" onClick={() => setOpen(false)} className="block py-2 px-2 hover:bg-gray-50 rounded-lg transition-colors">Home</NavLink>

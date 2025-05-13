@@ -65,7 +65,7 @@ const Login = () => {
                     onClick={handleGoogleLogin}
                     className="w-full flex items-center justify-center gap-3 py-2.5 px-4 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                 >
-                    <img src={assets.google_logo} alt="Google logo" className='w-5' />
+                    <img src={assets.google_logo} alt="Google logo" className='w-5' loading="lazy"/>
                     <span className="text-gray-700 font-medium">Continue with Google</span>
                 </button>
 

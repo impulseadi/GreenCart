@@ -112,6 +112,7 @@ const EditProfile = () => {
                         src={formData.avatar}
                         alt="Preview"
                         className="w-20 h-20 object-cover rounded-full border"
+                    loading="lazy"
                     />
                 ) : (
                     <div className="w-20 h-20 rounded-full bg-gray-200 flex items-center justify-center text-sm text-gray-500">
